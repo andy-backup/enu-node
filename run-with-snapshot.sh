@@ -1,1 +1,0 @@
-nohup ./enunode --data-dir ./data --config-dir ./config --snapshot ./snapshot.bin > log 2>&1 &

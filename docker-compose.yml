@@ -1,0 +1,10 @@
+version: '2'
+services:
+  enu:
+    build: ./
+    restart: always
+    volumes:
+      - ./config:/enu/config
+      - ./data:/enu/data
+      - ./start.sh:/enu/start.sh
+    command: ['bash', '/enu/start.sh']
