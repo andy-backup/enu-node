@@ -3,6 +3,9 @@ services:
   enu:
     build: ./
     restart: always
+    ports:
+      - '8123:8123'
+      - '9003:9003'
     volumes:
       - ./config:/enu/config
       - ./data:/enu/data
