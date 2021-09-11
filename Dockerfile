@@ -1,9 +1,9 @@
 # build base 
 
-  FROM ubuntu:18.04 AS base
+  FROM ubuntu:latest AS base
 
   RUN apt-get update -y \
-    && apt-get install -y openssl
+    && apt-get install -y openssl libtinfo5
 
 # build enu
 
