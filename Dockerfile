@@ -3,7 +3,7 @@
   FROM ubuntu:latest AS base
 
   RUN apt-get update -y \
-    && apt-get install -y openssl libtinfo5
+    && apt-get install -y wget openssl libtinfo5
 
 # build enu
 
