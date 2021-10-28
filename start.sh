@@ -12,6 +12,7 @@ if [ "$PRODUCER_API_ENABLE" = "true" ]; then
 fi
 
 if [ "$PRODUCER_ENABLE" = "true" ]; then
+  echo "plugin = enumivo::producer_plugin" >> ./config/config.ini
   echo "producer-name = $PRODUCER_NAME" >>  ./config/config.ini
   echo "signature-provider=$PUBLIC_KEY=KEY:$PRIVATE_KEY" >>  ./config/config.ini
 fi
