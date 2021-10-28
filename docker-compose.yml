@@ -1,0 +1,16 @@
+version: '2'
+services:
+  enu:
+    build: ./
+    restart: always
+    ports:
+      - '8123:8123'
+      - '9003:9003'
+    environment:
+      PRODUCER_ENABLE: 'false'
+      PRODUCER_NAME:
+      PUBLIC_KEY:
+      PRIVATE_KEY:
+      PRODUCER_API_ENABLE: 'false'
+      SNAPSHOT_URL: https://github.com/andy-backup/enu/raw/master/snapshot.bin
+    command: ['bash', '/enu/start.sh']
