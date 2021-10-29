@@ -17,7 +17,7 @@ if [ "$PRODUCER_ENABLE" = "true" ]; then
   echo "signature-provider=$PUBLIC_KEY=KEY:$PRIVATE_KEY" >>  ./config/config.ini
 fi
 
-rm -rf ./data
+rm -rf ./data/*
 
 wget $SNAPSHOT_URL -O $SNAPSHOT_FILE
 
