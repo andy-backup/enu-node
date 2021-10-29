@@ -24,17 +24,19 @@ SNAPSHOT_ENABLE=true
 SNAPSHOT_URL=https://github.com/andy-backup/enu/raw/master/snapshot.bin
 # enable provide
 HTTP_ENABLE=false
-P2P_ENABLE=false
 # provide information
 HTTP_HOST=
 P2P_PORT=
 
 # install enu-node
 helm install $NAME mingfunwong/enu-node \
-  --set PRODUCER_ENABLE=$PRODUCER_ENABLE\
-  --set PRODUCER_NAME=$PRODUCER_NAME\
-  --set PUBLIC_KEY=$PUBLIC_KEY\
-  --set PRIVATE_KEY=$PRIVATE_KEY\
-  --set PRODUCER_API_ENABLE=$PRODUCER_API_ENABLE\
-  --set SNAPSHOT_ENABLE=$SNAPSHOT_ENABLE\
-  --set SNAPSHOT_URL=$SNAPSHOT_URL 
+  --set PRODUCER_ENABLE=$PRODUCER_ENABLE \
+  --set PRODUCER_NAME=$PRODUCER_NAME \
+  --set PUBLIC_KEY=$PUBLIC_KEY \
+  --set PRIVATE_KEY=$PRIVATE_KEY \
+  --set PRODUCER_API_ENABLE=$PRODUCER_API_ENABLE \
+  --set SNAPSHOT_ENABLE=$SNAPSHOT_ENABLE \
+  --set SNAPSHOT_URL=$SNAPSHOT_URL \
+  --set ingress.enabled=$HTTP_ENABLE \
+  --set ingress.hosts.host=$HTTP_HOST \
+  --set service.p2pPort=$P2P_PORT
