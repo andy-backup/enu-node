@@ -1,6 +1,6 @@
 services:
   enu:
-    build: ./
+    image: mingfunwong/enu:1.7.3
     restart: always
     ports:
       - '8123:8123'
