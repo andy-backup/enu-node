@@ -12,4 +12,6 @@ RUN chmod o+x enunode
 COPY config ./config
 COPY start.sh .
 
+EXPOSE 8080
+
 ENTRYPOINT ["bash", "/enu/start.sh"]
